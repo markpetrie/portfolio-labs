@@ -15,7 +15,6 @@ function Project (projectData) {
 Project.prototype.toHtml = function() {
     var $newProject = $('article.template').clone();
     $newProject.removeClass('template');
-    console.log($newProject);
   /* TODO: This cloned article still has a class of template.
   However, in our modules.css stylesheet, we gave all elements
   with a class of template a display of none. Let's make
@@ -32,11 +31,8 @@ Project.prototype.toHtml = function() {
 projectData.forEach(function(projectObject) {
   // REVIEW: Take a look at this forEach method; This may be the first time we've seen it.
     projects.push(new Project(projectObject));
-    console.log(projects);
 });
 
 projects.forEach(function(project) {
-    console.log(project.toHtml());
     $('#projects').append(project.toHtml());
-    // console.log('projects forEAch is running');
 });
