@@ -1,6 +1,6 @@
 'use strict';
 
-var projectData = [{
+const projectData = [{
     title: 'Project One',
     tags: ['PM', ' Dev'],
     roles: ['PM', ' Dev'],

@@ -11,9 +11,12 @@ projectView.handleMainNav = function () {
     $('.main-nav .tab:first').click();
 };
 
-projectView.initIndexPage = function() {
-  Project.all.forEach(function(project) {
-    $('#projects').append(project.toHtml())
-  });
-  projectView.handleMainNav();
+projectView.initIndexPage = () => {
+  app.Project.all.map( project => $('#projects').append( project.toHtml()))
 };
+
+// function() {
+//   app.Project.all.forEach(function(project) {
+//     $('#projects').append(project.toHtml())
+//   });
+  projectView.handleMainNav()
