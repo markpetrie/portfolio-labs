@@ -19,25 +19,25 @@ var app = {};
     return filledTemplate;
   }
 
-  Project.loadAll = function (rawData) {
+  Project.loadAll = rawData => {
 
-    rawData.forEach(function (ele) {
+    rawData.map(ele => {
       Project.all.push(new Project(ele));
     })
   }
 
-  Project.runWhenDone = function (data) {
+  Project.runWhenDone = data => {
 
     localStorage.setItem('rawData', JSON.stringify(data));
     Project.loadAll(data);
     projectView.initIndexPage();
   }
 
-  Project.runWhenErr = function (err) {
+  Project.runWhenErr = err => {
     console.error('error', err);
   }
 
-  Project.getDBData = function () {
+  Project.getDBData = () => {
     $.ajax({
       type: 'GET',
       url: './data/projects.json',
@@ -46,7 +46,7 @@ var app = {};
     })
   }
 
-  Project.checkETag = function () {
+  Project.checkETag = () => {
     $.ajax({
       type: 'HEAD',
       url: './data/projects.json',
@@ -55,7 +55,7 @@ var app = {};
     })
   }
 
-  Project.validateETag = function (data, message, xhr) {
+  Project.validateETag = (data, message, xhr) => {
     var eTag = xhr.getResponseHeader('ETag');
     if (eTag === JSON.parse(localStorage.getItem('lsETag'))) {
       Project.loadAll(JSON.parse(localStorage.rawData))
