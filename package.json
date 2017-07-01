@@ -2,7 +2,7 @@
   "name": "portfolio-labs",
   "version": "1.0.0",
   "description": "Portfolio lab assignments for code 301",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +21,7 @@
     "express": "^4.15.3"
   },
   "devDependencies": {
-    "eslint": "^4.1.1",
-    "eslint-config-google": "^0.8.0"
+    "eslint": "^4.1.1"
+   
   }
 }
