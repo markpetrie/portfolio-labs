@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="vendor/styles/railscasts.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>-->
+    <script src="/vendor/scripts/handlebars.js"></script>
     <script id="project-template" type="text/x-handlebars-template">
         <header>
             <h1>{{title}}</h1>
@@ -37,8 +38,8 @@
         <nav class="main-nav">
             <div class="icon-menu"></div>
             <ul>
-                <li class="tab" data-content="projects"><a href="#" class="icon-home"> Projects</a></li>
-                <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
+                <li class="tab" data-content="projects"><a href="/" class="icon-home"> Projects</a></li>
+                <li class="tab" data-content="about"><a href="/about" class="icon-address-book"> About</a></li>
                 <li><a href="http://linkedin.com/in/markpetrie1" target="_blank" class="icon-twitter3"> LinkedIn</a></li>
                 <li><a href="http://github.com/markpetrie" target="_blank" class="icon-github"> GitHub</a></li>
             </ul>
@@ -54,12 +55,22 @@
     <footer>
         copyright 2017 Mark Petrie | Portfolio
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--TODO: Remove local libraries for jquery and handlebars and restore original CDN versions prior to submitting lab assignment-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="scripts/models/project.js"></script>
     <script src="scripts/viewers/projectView.js"></script>
     <script>
         app.Project.checkETag();
-    </script>
+    </script>-->
+
+    <script src="/vendor/scripts/jquery-3.2.1.js"></script>
+    <script src="/vendor/scripts/page.js"></script>
+    <script src="/scripts/models/project.js"></script>
+    <script src="/scripts/views/projectView.js"></script>
+    <script src="/scripts/views/aboutView.js"></script>
+    <script src="/scripts/controllers/projectController.js"></script>
+    <script src="/scripts/controllers/aboutController.js"></script>
+    <script src="/scripts/controllers/routes.js"></script>
 </body>
 
 </html>
