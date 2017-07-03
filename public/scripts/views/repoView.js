@@ -11,17 +11,13 @@ var app = app || {};
         $about.show().siblings().hide();
     };
 
-    var source = $('#repo-template').html();
-    var templateFiller = Handlebars.compile(source);
-
+    const render = Handlebars.compile($('#repo-template').text());
 
     repoView.index = function () {
         ui();
 
         $('#about ul').append(
-            app.repos.with('name').map(function (repo) {
-                return templateFiller(repo);
-            })
+            app.repos.with('name').map(render)
         );
     };
 
