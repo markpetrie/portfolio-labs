@@ -1,7 +1,7 @@
 'use strict';
 var app = app || {};
 
-(module => {
+( module => {
   const aboutController = {};
 
   aboutController.init = function () {
