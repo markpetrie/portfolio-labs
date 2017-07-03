@@ -8,11 +8,9 @@ var app = app || {};
 
     repos.requestRepos = function (callback) {
 
-
         $.get('GitHub/user/repos')
             .then(data => repos.all = data, err => console.error(err))
             .then(callback);
-
     };
 
     repos.with = attr => repos.all.filter(repo => repo[attr]);
