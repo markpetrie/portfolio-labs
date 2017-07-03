@@ -1,12 +1,12 @@
 'use strict';
 var app = app || {};
 
-(function (module) {
+( (module) => {
     const repos = {};
 
     repos.all = [];
 
-    repos.requestRepos = function (callback) {
+    repos.requestRepos = callback => {
 
         $.get('GitHub/user/repos')
             .then(data => repos.all = data, err => console.error(err))

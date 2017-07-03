@@ -1,10 +1,10 @@
 'use strict';
 var app = app || {};
 
-(function (module) {
+( module => {
     const repoView = {};
 
-    const ui = function () {
+    const ui = () => {
         let $about = $('#about');
 
         $about.find('ul').empty();
@@ -13,7 +13,7 @@ var app = app || {};
 
     const render = Handlebars.compile($('#repo-template').text());
 
-    repoView.index = function () {
+    repoView.index = () => {
         ui();
 
         $('#about ul').append(

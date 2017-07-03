@@ -1,10 +1,10 @@
 'use strict';
 var app = app || {};
 
-(function (module) {
+( module => {
     const projectController = {};
 
-    projectController.init = function () {
+    projectController.init = () => {
         $('main > section').hide();
         $('#projects').show();
         app.Project.checkETag();

@@ -1,7 +1,13 @@
 'use strict';
 
-const projectView = {};
+var app = app || {};
 
-projectView.initIndexPage = () => {
-  app.Project.all.map(project => $('#projects').append(project.toHtml()))
-};
+( module => {
+  const projectView = {};
+
+  projectView.initIndexPage = () => {
+    app.Project.all.map(project => $('#projects').append(project.toHtml()))
+  };
+
+  module.projectView = projectView;
+})(app);

@@ -1,7 +1,7 @@
 'use strict';
 var app = app || {};
 
-(function (module) {
+( module => {
   const aboutController = {};
 
   aboutController.init = function () {
@@ -10,8 +10,6 @@ var app = app || {};
 
     app.repos.requestRepos(app.repoView.index);
   }
-
-
 
   module.aboutController = aboutController;
 })(app);
