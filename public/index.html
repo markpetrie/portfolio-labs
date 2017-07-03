@@ -25,6 +25,20 @@
                 <p>
         </section>
     </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+        <li>
+            <a href="{{html_url}}" target="_blank">
+                <h3>{{name}}</h3>
+            </a>
+            <p>Description: {{description}}</p>
+            <p>Language: {{language}}</p>
+            <p>Created: {{created_at}}</p>
+            <p>Last updated: {{updated_at}}</p>
+            {{#if watchers_count}}
+            <p>{{watchers_count}} watching this repo</p>
+            {{/if}}
+        </li>
+    </script>
 </head>
 
 <body>
@@ -55,13 +69,6 @@
     <footer>
         copyright 2017 Mark Petrie | Portfolio
     </footer>
-    <!--TODO: Remove local libraries for jquery and handlebars and restore original CDN versions prior to submitting lab assignment-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="scripts/models/project.js"></script>
-    <script src="scripts/viewers/projectView.js"></script>
-    <script>
-        app.Project.checkETag();
-    </script>-->
 
     <script src="/vendor/scripts/jquery-3.2.1.js"></script>
     <script src="/vendor/scripts/page.js"></script>
@@ -71,8 +78,6 @@
     <script src="/scripts/controllers/projectController.js"></script>
     <script src="/scripts/models/repo.js"></script>
     <script src="/scripts/views/repoView.js"></script>
-
-    <script src="/scripts/controllers/routes.js"></script>
     <script src="/scripts/controllers/aboutController.js"></script>
     <script src="/scripts/controllers/routes.js"></script>
 </body>
