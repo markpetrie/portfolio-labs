@@ -13,7 +13,7 @@ var app = app || {};
 
     const render = Handlebars.compile($('#repo-template').text());
 
-    repoView.index = function () {
+    repoView.index = () => {
         ui();
 
         $('#about ul').append(
