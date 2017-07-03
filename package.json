@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-labs",
+  "version": "1.0.0",
+  "description": "Portfolio lab assignments for code 301",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markpetrie/portfolio-labs.git"
+  },
+  "author": "Mark Petrie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markpetrie/portfolio-labs/issues"
+  },
+  "homepage": "https://github.com/markpetrie/portfolio-labs#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.1.1"
+   
+  }
+}
