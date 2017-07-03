@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-(function (module) {
+( module => {
   const projectView = {};
 
   projectView.initIndexPage = () => {
