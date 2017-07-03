@@ -2,24 +2,22 @@
 var app = app || {};
 
 (function (module) {
-  const repos = {};
+    const repos = {};
 
-  repos.all = [];
+    repos.all = [];
 
-  repos.requestRepos = function (callback) {
-       
-    $.ajax({
-      url: 'https://api.github.com/user/repos',
-      type: 'GET',
-      headers: {
-        'Authorization': `token ${githubToken}`
-      }
-    }).then(data => repos.all = data, err => console.error(err))
-      .then(callback);
+    repos.requestRepos = function (callback) {
 
-  };
+        $.ajax({
+            url: 'https://api.github.com/user/repos',
+            type: 'GET',
+            headers: {
+                'Authorization': `token ${githubToken}`
+            }
+        }).then(data => repos.all = data, err => console.error(err))
+            .then(callback);
 
-  repos.with = attr => repos.all.filter(repo => repo[attr]);
+    };
 
-  module.repos = repos;
+    module.repos = repos;
 })(app);
