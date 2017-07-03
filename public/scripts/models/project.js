@@ -30,7 +30,7 @@ var app = {};
 
     localStorage.setItem('rawData', JSON.stringify(data));
     Project.loadAll(data);
-    projectView.initIndexPage();
+    app.projectView.initIndexPage();
   }
 
   Project.runWhenErr = err => {
@@ -59,7 +59,7 @@ var app = {};
     var eTag = xhr.getResponseHeader('ETag');
     if (eTag === JSON.parse(localStorage.getItem('lsETag'))) {
       Project.loadAll(JSON.parse(localStorage.rawData))
-      projectView.initIndexPage();
+      app.projectView.initIndexPage();
     } else {
       localStorage.setItem('lsETag', JSON.stringify(eTag));
       Project.getDBData();
