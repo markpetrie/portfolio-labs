@@ -3,11 +3,11 @@
 var app = app || {};
 
 (function (module) {
-const projectView = {};
+  const projectView = {};
 
-projectView.initIndexPage = () => {
-  app.Project.all.map(project => $('#projects').append(project.toHtml()))
-};
+  projectView.initIndexPage = () => {
+    app.Project.all.map(project => $('#projects').append(project.toHtml()))
+  };
 
-module.projectView = projectView;
+  module.projectView = projectView;
 })(app);
