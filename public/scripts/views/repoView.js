@@ -4,7 +4,7 @@ var app = app || {};
 (function (module) {
     const repoView = {};
 
-    const ui = function () {
+    const ui = () => {
         let $about = $('#about');
 
         $about.find('ul').empty();
